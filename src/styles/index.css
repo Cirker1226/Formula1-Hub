@@ -1,0 +1,168 @@
+/* Base */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.container-geral {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+/* Landing Page (texto à esquerda) */
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    width: 50%;
+    min-height: 100vh;
+    padding: 3rem;
+}
+
+.landing-page p {
+    max-width: 460px;
+    margin: 0;
+    color: #b5b5b5;
+    line-height: 1.8;
+}
+
+/* Texto superior */
+
+.landing-page>p:first-child {
+    color: #e10600;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+/* Título */
+
+.landing-page h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.landing-page h1 span {
+    display: block;
+    color: #e10600;
+}
+
+/* Botões */
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    margin: 0 0 1rem;
+}
+
+.button-container a {
+    text-decoration: none;
+}
+
+.button-container .btn {
+    min-width: 165px;
+    padding: 0.95rem 0;
+    border: 1px solid #e10600;
+    border-radius: 4px;
+    background: #e10600;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+/* Botão secundário (Conhecer Equipes) */
+
+.button-container a:last-child .btn {
+    background: transparent;
+    border-color: #444;
+}
+
+.button-container .btn:hover {
+    border-color: #e10600;
+        transform: translateY(-2px);
+}
+
+/*  Estatisticas */
+
+.stats-container {
+    display: flex;
+    width: 100%;
+    max-width: 520px;
+    padding-top: 1.3rem;
+    border-top: 1px solid #333;
+}
+
+.stats-container p {
+    flex: 1;
+    margin: 0;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    border-right: 1px solid #333;
+}
+
+.stats-container p:first-child {
+    padding-left: 0;
+}
+
+.stats-container p:last-child {
+    border-right: none;
+}
+
+/* Lado direito - Imagem dos pilotos */
+
+/* Lado direito */
+
+.hero-images {
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(
+        circle at center,
+        rgba(225, 6, 0, 0.12),
+        transparent 70%
+    );
+}
+
+#fotoPage {
+    display: block;
+    width: 100%;
+    max-width: 48rem;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Telas menores */
+
+@media (max-width: 900px) {
+    .hero-images {
+        width: 50%;
+        min-height: 100vh;
+    }
+
+    #fotoPage {
+        width: 110%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-images {
+        width: 100%;
+        min-height: auto;
+    }
+
+    #fotoPage {
+        width: 100%;
+        max-width: 30rem;
+    }
+}
